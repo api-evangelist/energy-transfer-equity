@@ -22,6 +22,8 @@ description: >-
   gas scheduling, are now provided under the Energy Transfer LP brand.
 apis: []
 common:
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/energy-transfer
   - type: Successor
     url: https://www.energytransfer.com
   - type: Successor Developer Portal
