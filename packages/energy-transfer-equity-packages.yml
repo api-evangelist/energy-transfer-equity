@@ -1,0 +1,14 @@
+generated: '2026-09-06'
+method: searched
+source: >-
+  registry.npmjs.org search, pypi.org/pypi/energy-transfer/json (404),
+  rubygems.org/api/v1/gems/energy-transfer.json (404),
+  api.github.com/orgs/energytransfer (404), and a GitHub code search for an
+  Energy Transfer Messenger+ client (0 results).
+package_count: 0
+packages: []
+note: >-
+  No first-party client library exists under the Energy Transfer Equity name, and
+  none exists under the successor Energy Transfer LP name either. There is no
+  GitHub organization at github.com/energytransfer. Recorded as a checked zero,
+  not an unchecked gap. No SDKs pointer is emitted.

@@ -1,0 +1,47 @@
+generated: '2026-09-06'
+method: probed
+source: >-
+  dig (A/NS/DS/CAA/TXT/MX) plus an OpenSSL TLS handshake and an HTTP HEAD against
+  energytransferequity.com, the legacy Energy Transfer Equity, L.P. corporate
+  domain. 0-working/probe-domain-security.py returned "no-hosts" for this slug
+  because apis.yml carries no Website property and no apis[] baseURL — the record
+  is a defunct-entity index — so the legacy domain was probed by hand.
+note: >-
+  FINDING: the legacy corporate domain is no longer under company control. It is
+  delegated to GoDaddy NameFind parking nameservers and is listed for sale on the
+  GoDaddy aftermarket. The TLS certificate is a GoDaddy DV cert issued to the
+  parking service, not an Energy Transfer certificate. Recorded because a lapsed
+  corporate domain that answers 200 to everything is a live impersonation surface
+  for a Fortune 100 name, and because it is why every /.well-known/ probe on that
+  host must be discarded. The successor entity's hosts (energytransfer.com,
+  dev.messenger.energytransfer.com) are profiled in all/energy-transfer/ and are
+  deliberately NOT scored here.
+hosts:
+  - host: energytransferequity.com
+    https: true
+    tls_version: TLSv1.3
+    cipher: TLS_AES_128_GCM_SHA256
+    cert_subject: CN=energytransferequity.com
+    cert_issuer: GoDaddy TLS Intermediate CA DV - R1v1
+    cert_not_before: '2026-07-16'
+    cert_not_after: '2027-01-30'
+    hsts: false
+    hsts_max_age: null
+    company_controlled: false
+    note: GoDaddy aftermarket parking lander; answers 200 on every path
+domains:
+  - domain: energytransferequity.com
+    nameservers: [ns1.namefind.com, ns2.namefind.com]
+    dnssec: false
+    caa: []
+    spf: true
+    spf_record: v=spf1 -all
+    dmarc: false
+    dmarc_policy: null
+    mx: []
+    note: >-
+      SPF is a hard-fail null record and there are no MX records — the parking
+      operator has disabled mail on the domain. The _dmarc TXT lookup returns the
+      apex "v=spf1 -all" string, i.e. a wildcard TXT answer, NOT a DMARC policy;
+      recorded as dmarc: false so a wildcard is not miscounted as a published
+      policy.

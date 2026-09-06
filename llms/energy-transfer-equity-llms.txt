@@ -1,0 +1,63 @@
+# Energy Transfer Equity, L.P.
+
+> Energy Transfer Equity, L.P. (NYSE: ETE) was a master limited partnership that
+> owned and operated a diverse portfolio of midstream energy assets — natural gas
+> gathering, processing, transportation and storage, NGL and crude pipelines, and
+> retail fuel. In October 2018 ETE merged with its operating subsidiary Energy
+> Transfer Partners, L.P. to form a single publicly traded partnership, Energy
+> Transfer LP (NYSE: ET). ETE no longer exists as a separate registrant and
+> publishes no API, developer portal, or machine-readable contract of its own.
+> Every developer resource that once sat under the ETE umbrella — including the
+> Messenger+ portal for pipeline messaging, nominations and gas scheduling — is
+> now published under the Energy Transfer LP brand.
+
+This file is an independent third-party profile maintained by API Evangelist. It
+is not published by Energy Transfer.
+
+## Status
+
+- Entity status: dissolved into Energy Transfer LP, October 2018
+- API surface under this name: none
+- Machine-readable contract under this name: none found (see Discovery below)
+- Legacy corporate domain energytransferequity.com: no longer company-controlled;
+  delegated to GoDaddy NameFind parking nameservers and listed for sale on the
+  GoDaddy aftermarket
+
+## Successor
+
+- [Energy Transfer LP](https://www.energytransfer.com): the surviving entity
+- [Messenger+ developer portal](https://dev.messenger.energytransfer.com/): the
+  successor's login-gated portal for shippers — pipeline messaging, nominations
+  and gas scheduling
+- [api-evangelist/energy-transfer](https://github.com/api-evangelist/energy-transfer):
+  the API Evangelist profile that carries the successor's API artifacts
+
+## Discovery
+
+Probed 2026-09-06 across energytransferequity.com, www.energytransfer.com and
+dev.messenger.energytransfer.com:
+
+- OpenAPI / Swagger (/openapi.json, /openapi.yaml, /swagger.json,
+  /swagger/v1/swagger.json, /v1/openapi.json, /api-docs, /docs, /redoc): none.
+  The successor's /docs, /redoc and /api-docs all return the identical
+  2,444,573-byte marketing SPA shell — a soft-404, not documentation.
+- A2A agent card (/.well-known/agent-card.json, /.well-known/agent.json): none.
+- MCP server: none published.
+- /.well-known/ discovery surface: nothing served. Full probe record with per-path
+  HTTP statuses in well-known/energy-transfer-equity-well-known.yml.
+- First-party SDKs on npm, PyPI, RubyGems, and a GitHub organization: none.
+
+## Profile artifacts
+
+- [apis.yml](https://raw.githubusercontent.com/api-evangelist/energy-transfer-equity/refs/heads/main/apis.yml)
+- [Well-known probe](https://raw.githubusercontent.com/api-evangelist/energy-transfer-equity/refs/heads/main/well-known/energy-transfer-equity-well-known.yml)
+- [Domain security](https://raw.githubusercontent.com/api-evangelist/energy-transfer-equity/refs/heads/main/security/energy-transfer-equity-domain-security.yml)
+- [Packages](https://raw.githubusercontent.com/api-evangelist/energy-transfer-equity/refs/heads/main/packages/energy-transfer-equity-packages.yml)
+- [Plans and pricing](https://raw.githubusercontent.com/api-evangelist/energy-transfer-equity/refs/heads/main/plans/energy-transfer-equity-plans-pricing.yml)
+- [Rate limits](https://raw.githubusercontent.com/api-evangelist/energy-transfer-equity/refs/heads/main/rate-limits/energy-transfer-equity-rate-limits.yml)
+
+## Corrections
+
+Open an issue on
+[api-evangelist/energy-transfer-equity](https://github.com/api-evangelist/energy-transfer-equity)
+or email info@apievangelist.com. Corrections, re-scores and removal are free.

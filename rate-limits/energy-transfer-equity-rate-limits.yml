@@ -1,0 +1,10 @@
+generated: '2026-09-06'
+method: searched
+source: https://dev.messenger.energytransfer.com/
+limit_count: 0
+rate_limits: []
+note: >-
+  No published rate limits. Energy Transfer Equity, L.P. publishes no API; the
+  successor's Messenger+ portal is a login-gated Angular application that
+  documents no limits or rate-limit response headers on any anonymously
+  reachable page. An honest zero, not an unchecked gap.

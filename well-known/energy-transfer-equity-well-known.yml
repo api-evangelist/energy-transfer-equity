@@ -1,0 +1,181 @@
+generated: '2026-09-06'
+method: probed
+source: >-
+  Live probe of the closed well-known path list against every host this record
+  knows: the legacy Energy Transfer Equity corporate domain, and the two
+  Successor pointers already carried in apis.yml (Energy Transfer LP corporate
+  site and the Messenger+ developer portal).
+note: >-
+  Energy Transfer Equity, L.P. ceased to exist as a separate registrant when it
+  merged with Energy Transfer Partners in October 2018. It serves no host of its
+  own. energytransferequity.com now resolves to GoDaddy NameFind parking
+  nameservers (ns1/ns2.namefind.com) and answers HTTP 200 with a 114-byte
+  redirect-to-/lander shell for EVERY path requested, including a
+  negative-control path that cannot exist — so every 200 recorded on that host
+  is the parking service, not the company, and none of them is a document.
+  The energytransfer.com and dev.messenger.energytransfer.com hosts belong to
+  the SUCCESSOR entity, Energy Transfer LP, and are profiled in
+  all/energy-transfer/ — they are probed here only to record that this
+  predecessor record inherits no well-known surface from them.
+  NO WellKnown or SecurityTxt pointer is emitted: nothing was served.
+hit_count: 0
+path_echo_control: failed        # energytransferequity.com 200s a control path that cannot exist
+soft_404_control:
+  url: https://energytransferequity.com/.well-known/ete-negative-control-7f3ab91c.json
+  status: 200
+  bytes: 114
+  verdict: catch-all parking lander; every 200 on this host is discarded
+hosts:
+  - host: https://energytransferequity.com
+    ownership: >-
+      NOT company-controlled. Listed for sale on the GoDaddy aftermarket
+      (forsale.godaddy.com/forsale/energytransferequity.com); NameFind
+      nameservers; its own /llms.txt describes the domain as inventory for sale.
+    documents:
+      - path: /.well-known/security.txt
+        status: 200
+        file: null
+        note: catch-all HTML lander, 114 bytes — not a document
+      - path: /.well-known/openid-configuration
+        status: 200
+        file: null
+        note: catch-all HTML lander — not a document
+      - path: /.well-known/oauth-authorization-server
+        status: 200
+        file: null
+        note: catch-all HTML lander — not a document
+      - path: /.well-known/oauth-protected-resource
+        status: 200
+        file: null
+        note: catch-all HTML lander — not a document
+      - path: /.well-known/api-catalog
+        status: 200
+        file: null
+        note: catch-all HTML lander — not a document
+      - path: /.well-known/ai-plugin.json
+        status: 200
+        file: null
+        note: catch-all HTML lander — not a document
+      - path: /.well-known/aauth-resource.json
+        status: 200
+        file: null
+        note: catch-all HTML lander — no issuer/jwks_uri — not a document
+      - path: /.well-known/apis.json
+        status: 200
+        file: null
+        note: catch-all HTML lander — not a document
+      - path: /apis.json
+        status: 200
+        file: null
+        note: catch-all HTML lander — not a document
+      - path: /apis.yml
+        status: 200
+        file: null
+        note: catch-all HTML lander — not a document
+      - path: /.well-known/agent-card.json
+        status: 200
+        file: null
+        note: catch-all HTML lander — not an AgentCard
+      - path: /.well-known/agent.json
+        status: 200
+        file: null
+        note: catch-all HTML lander — not an AgentCard
+      - path: /llms.txt
+        status: 200
+        file: null
+        note: >-
+          200 text/plain, 610 bytes, but authored by the GoDaddy parking
+          service and about the DOMAIN SALE, not about Energy Transfer Equity.
+          Deliberately NOT saved — it is not the company's document.
+  - host: https://www.energytransfer.com
+    ownership: Successor entity (Energy Transfer LP), profiled in all/energy-transfer/
+    documents:
+      - path: /.well-known/security.txt
+        status: 403
+        file: null
+      - path: /.well-known/openid-configuration
+        status: 403
+        file: null
+      - path: /.well-known/oauth-authorization-server
+        status: 403
+        file: null
+      - path: /.well-known/oauth-protected-resource
+        status: 403
+        file: null
+      - path: /.well-known/api-catalog
+        status: 403
+        file: null
+      - path: /.well-known/ai-plugin.json
+        status: 403
+        file: null
+      - path: /.well-known/aauth-resource.json
+        status: 403
+        file: null
+      - path: /.well-known/apis.json
+        status: 403
+        file: null
+      - path: /apis.json
+        status: 403
+        file: null
+      - path: /apis.yml
+        status: 403
+        file: null
+      - path: /.well-known/agent-card.json
+        status: 403
+        file: null
+      - path: /.well-known/agent.json
+        status: 403
+        file: null
+      - path: /llms.txt
+        status: 403
+        file: null
+    note: >-
+      The edge answers 403 to a browser User-Agent on every /.well-known/ and
+      root-file path while serving the marketing site at 200; /docs, /redoc and
+      /api-docs all return the identical 2,444,573-byte SPA shell, i.e. a
+      soft-404 catch-all, not documentation.
+  - host: https://dev.messenger.energytransfer.com
+    ownership: Successor entity (Energy Transfer LP) Messenger+ portal, profiled in all/energy-transfer/
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+        file: null
+      - path: /.well-known/openid-configuration
+        status: 404
+        file: null
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+        file: null
+      - path: /.well-known/oauth-protected-resource
+        status: 404
+        file: null
+      - path: /.well-known/api-catalog
+        status: 404
+        file: null
+      - path: /.well-known/ai-plugin.json
+        status: 404
+        file: null
+      - path: /.well-known/aauth-resource.json
+        status: 404
+        file: null
+      - path: /.well-known/apis.json
+        status: 404
+        file: null
+      - path: /apis.json
+        status: 404
+        file: null
+      - path: /apis.yml
+        status: 404
+        file: null
+      - path: /.well-known/agent-card.json
+        status: 404
+        file: null
+      - path: /.well-known/agent.json
+        status: 404
+        file: null
+      - path: /llms.txt
+        status: 404
+        file: null
+    note: >-
+      Azure App Service default 404 page on every path; the portal itself is an
+      Angular SPA behind a login.
