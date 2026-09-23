@@ -1,7 +1,9 @@
 ---
 title: Energy Transfer details vast midstream network in 10-K
 url: https://www.stocktitan.net/sec-filings/ET/10-k-energy-transfer-lp-files-annual-report-92d1558c35ce.html
-date: '2026-05-25'
+published: ''
+date_basis: harvested
+harvested: '2026-05-25'
 query: '"Energy Transfer Equity" press release artificial intelligence'
 position: 5
 source: serpapi-google

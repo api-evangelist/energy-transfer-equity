@@ -1,7 +1,9 @@
 ---
 title: Power demand is skyrocketing from AI, electrification and ...
 url: https://www.facebook.com/WilliamsEnergyCo/posts/power-demand-is-skyrocketing-from-ai-electrification-and-industrial-reshoring-bu/904918505241219/
-date: '2026-05-25'
+published: ''
+date_basis: harvested
+harvested: '2026-05-25'
 query: '"Energy Transfer Equity" press release artificial intelligence'
 position: 4
 source: serpapi-google
